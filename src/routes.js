@@ -1,11 +1,15 @@
 const roads = Object.freeze({
-  Winterfell: ["The Eyrie", "Riverrun"],
+  "Castle Black": ["Winterfell"],
+  Winterfell: ["Castle Black", "The Eyrie", "Riverrun"],
   "The Eyrie": ["Winterfell", "Riverrun", "King's Landing"],
-  Riverrun: ["Winterfell", "The Eyrie", "Casterly Rock", "King's Landing"],
-  "Casterly Rock": ["Riverrun", "Highgarden"],
-  "King's Landing": ["The Eyrie", "Riverrun", "Highgarden", "Storm's End"],
-  Highgarden: ["Casterly Rock", "King's Landing", "Sunspear"],
-  "Storm's End": ["King's Landing", "Sunspear"],
+  Riverrun: ["Winterfell", "The Eyrie", "Pyke", "Casterly Rock", "King's Landing"],
+  Pyke: ["Riverrun", "Casterly Rock"],
+  "Casterly Rock": ["Riverrun", "Pyke", "Highgarden"],
+  "King's Landing": ["The Eyrie", "Riverrun", "Dragonstone", "Highgarden", "Storm's End"],
+  Dragonstone: ["King's Landing", "Storm's End"],
+  Highgarden: ["Casterly Rock", "King's Landing", "Oldtown", "Sunspear"],
+  Oldtown: ["Highgarden"],
+  "Storm's End": ["King's Landing", "Dragonstone", "Sunspear"],
   Sunspear: ["Highgarden", "Storm's End"]
 });
 
@@ -32,4 +36,16 @@ export function findShortestRoute(origin, destination) {
   }
 
   return [];
+}
+
+export function describeRoute(route) {
+  if (!Array.isArray(route) || route.length === 0) {
+    return "No raven route available.";
+  }
+
+  if (route.length === 1) {
+    return `Raven remains at ${route[0]} for a local handoff.`;
+  }
+
+  return `Raven hops ${route.length - 1} legs via ${route.join(" -> ")}.`;
 }
