@@ -23,6 +23,37 @@ The service prints a sample route from Winterfell to King's Landing. All names a
 - `test/index.test.js` — CLI and standings tests
 - `test/routes.test.js` — route tests
 
+## Illustrative House Lineage
+
+This diagram is intentionally lightweight and demo-friendly rather than a full canon family tree.
+
+```mermaid
+flowchart TD
+  DawnAge["Ancient Noble Lines"]
+
+  DawnAge --> FirstMen["First Men Line"]
+  DawnAge --> Andal["Andal Line"]
+  DawnAge --> Valyrian["Valyrian Line"]
+  DawnAge --> Ironborn["Ironborn Line"]
+
+  FirstMen --> Stark["House Stark"]
+  FirstMen --> Tully["House Tully"]
+
+  Andal --> Arryn["House Arryn"]
+  Andal --> Lannister["House Lannister"]
+  Andal --> Tyrell["House Tyrell"]
+  Andal --> Martell["House Martell"]
+  Andal --> Baratheon["House Baratheon"]
+  Andal --> Hightower["House Hightower"]
+
+  Valyrian --> Targaryen["House Targaryen"]
+  Ironborn --> Greyjoy["House Greyjoy"]
+
+  Targaryen -. royal alliance .-> Baratheon
+  Tyrell -. reach banner house .-> Hightower
+  Stark -. riverlands alliance .-> Tully
+```
+
 ## Roadmap
 
 - Raven priority classes
