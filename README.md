@@ -9,6 +9,7 @@ A tiny, dependency-free JavaScript service for routing fictional ravens between 
 ```bash
 npm test
 npm start
+node src/index.js --origin Sunspear --destination Winterfell --show-standings --house-limit 3
 ```
 
 The service prints a sample route from Winterfell to King's Landing. All names and descriptions are short, original demo data rather than copied story text.
@@ -18,12 +19,13 @@ The service prints a sample route from Winterfell to King's Landing. All names a
 - `src/houses.js` — house and seat data
 - `src/routes.js` — shortest-route calculation
 - `src/index.js` — small command-line demo
+- `src/standings.js` — house operations board data
+- `test/index.test.js` — CLI and standings tests
 - `test/routes.test.js` — route tests
 
 ## Roadmap
 
 - Raven priority classes
 - Winter weather alerts
-- House standings dashboard
 - Maester operations guide
 
