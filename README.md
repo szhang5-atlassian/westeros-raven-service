@@ -16,13 +16,14 @@ The service prints a sample route from Winterfell to King's Landing. All names a
 ## Project map
 
 - `src/houses.js` — house and seat data
+- `src/dispatches.js` — priority-aware dispatch planning
 - `src/routes.js` — shortest-route calculation
 - `src/index.js` — small command-line demo
+- `test/dispatches.test.js` — dispatch planning tests
 - `test/routes.test.js` — route tests
 
 ## Roadmap
 
-- Raven priority classes
 - Winter weather alerts
 - House standings dashboard
 - Maester operations guide

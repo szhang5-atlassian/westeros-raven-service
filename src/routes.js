@@ -33,3 +33,15 @@ export function findShortestRoute(origin, destination) {
 
   return [];
 }
+
+export function describeRoute(route) {
+  if (!Array.isArray(route) || route.length === 0) {
+    return "No raven route available.";
+  }
+
+  if (route.length === 1) {
+    return `Raven remains at ${route[0]} for a local handoff.`;
+  }
+
+  return `Raven hops ${route.length - 1} legs via ${route.join(" -> ")}.`;
+}
