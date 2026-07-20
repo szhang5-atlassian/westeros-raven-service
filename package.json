@@ -1,0 +1,15 @@
+{
+  "name": "westeros-raven-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A fictional raven-routing demo set in Westeros",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
