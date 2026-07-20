@@ -11,7 +11,7 @@ npm test
 npm start
 ```
 
-The service prints a sample route from Winterfell to King's Landing. All names and descriptions are short, original demo data rather than copied story text.
+The service prints a sample dispatch from Castle Black to Dragonstone. All names and descriptions are short, original demo data rather than copied story text.
 
 ## Project map
 
@@ -19,6 +19,20 @@ The service prints a sample route from Winterfell to King's Landing. All names a
 - `src/routes.js` — shortest-route calculation
 - `src/index.js` — small command-line demo
 - `test/routes.test.js` — route tests
+
+## Current world state
+
+The demo network now includes a few extra fan-favorite stops for better screenshots and storytelling:
+
+- `Castle Black`
+- `Winterfell`
+- `Pyke`
+- `Casterly Rock`
+- `King's Landing`
+- `Dragonstone`
+- `Highgarden`
+- `Oldtown`
+- `Sunspear`
 
 ## Roadmap
 
